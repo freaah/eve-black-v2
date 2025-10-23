@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script>
+        const segmentCount = window.location.pathname.split('/').length - 1;
+        const redirectPath = segmentCount > 1 ? '../'.repeat(segmentCount) : './';
+        sessionStorage.redirect = redirectPath + 'index.html';
+        window.location.href = redirectPath + 'index.html';
+    </script>
+</head>
+<body>
+<p>Redirecting...</p>
+</body>
+</html>
